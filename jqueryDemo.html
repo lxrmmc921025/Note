@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Demo</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<tr>
+	<td>1</td>
+	<td>tod</td>
+	<td>15</td>
+</tr>
+<br>
+<tr>
+	<td>2</td>
+	<td>alice</td>
+	<td>18</td>
+</tr>
+
+
+
+
+<h1>jQuery Demo!</h1>
+
+<input type="text" placeholder="text">
+
+<select>
+	<option>A</option>
+	<option>B</option>
+	<option>C</option>
+</select>
+
+<div id="replace">
+</div>
+
+<ul>
+	<li>Newt</li>
+	<li>Howler Monkey <a href="monkey.com">Monkey.com</a></li>
+	<li id="adorable">Pine Marten</li>
+</ul>
+
+<a href="">Google</a>
+
+
+<h1>Exercise</h1>
+
+<button type="button">Button</button>
+
+<div id = "fade">
+	<div>Div 1</div>
+	<div class="highlight">Div 2</div>
+	<div id="third">Div 3</div>
+	<div class="highlight">Div 4</div>
+</div>
+
+
+<img src="https://dictionary.cambridge.org/images/thumb/cat_noun_001_02368.jpg?version=4.0.39">
+<img src="https://dictionary.cambridge.org/images/thumb/cat_noun_001_02368.jpg?version=4.0.39">
+<img src="https://dictionary.cambridge.org/images/thumb/cat_noun_001_02368.jpg?version=4.0.39">
+
+<script type="text/javascript">
+/*
+	//===================
+	var styles = {
+		color: "red",
+		background: "pink",
+		border: "2px solid purple"
+	}
+	$("h1").css(styles);
+
+	//===================
+	$("li").css("color", "blue")
+
+	//===================
+	$("a").css("font-size", "40px")
+
+	//===================
+	$("li").css({
+		fontSize: "10px",
+		border: "3px dashed purple",
+		background: "rgba(89, 45, 20, 0.5)"
+	});
+
+	//=========Exercise==========
+	$("div").css("background", "purple");
+	$("div.highlight").css("width", "200px");
+	$("#third").css("border", "2px solid orange");
+	//first-of-type : build in css, faster
+	$("div:first-of-type").css("color", "pink");
+	//first: jquery shortcut, slow a little bit
+	$("div:first").css("color", "pink");
+
+	//=========TEXT & HTML==========
+	$("h1").text();
+	$("h1").text("exercise")
+
+	$("ul").html();
+	$("ul").html("<li>I love coding</li><li>HAHAHAHA</li>");
+
+	//=========ATTR==========
+	//both "img" & 'img' is valid
+	$('img').attr("src", "https://www.cats.org.uk/uploads/images/featurebox_sidebar_kids/grief-and-loss.jpg");
+	$("input").attr("type", "checkbox")
+	$('img:first-of-type').attr("src", "https://www.cats.org.uk/uploads/images/featurebox_sidebar_kids/grief-and-loss.jpg");
+	$('img').last().attr("src", "https://www.cats.org.uk/uploads/images/featurebox_sidebar_kids/grief-and-loss.jpg");
+
+	//=========VAL==========
+	$("input").val();
+	$("input").val("Rusty Steele");
+	$("select").val();
+
+	//=========Class========
+	$("h1").addClass("correct")
+	$("h1").removeClass("correct")
+	$("h1").toggleClass("correct")
+
+	//=========Event========
+	$("h1").click(function(){
+		alert("h1 click!!")
+	});
+	$("li").click(function(){
+		var text = $(this).text();
+		console.log("Click " + text);
+		$(this).css("background", "pink");
+	});
+	$("input[type='text']").keypress(function(event){
+		if(event.which === 13) {
+			alert("You hit the enter");
+		} else {
+			var c = String.fromCharCode(event.which);
+			$("#replace").append(c);
+		}
+	});
+
+	$("li").on("click", function(){
+		console.log("content: " + $(this).text());
+		$(this).css("color", "pink");
+	});
+	$("li").on("mouseenter", function(){
+		console.log("want to click " + $(this).text() + "?");
+	});
+
+
+	//=========Effect========
+	$("button").on("click", function(){
+		$("#fade").slideToggle();
+		//$("#fade").fadeToggle(1000);
+		//$(this).remove();
+	});
+*/
+</script>  
+</body>
+</html>

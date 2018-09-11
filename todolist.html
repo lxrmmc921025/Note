@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="container">
+	<h1>To-Do List <span id="toggle-form"><i class="fa fa-plus">+</i></span></h1>
+	<input type="text" placeholder="Add New Todo">
+
+	<ul>
+		<li><span><i class="fa fa-trash">X</i></span> Go To Potions Class</li>
+		<li><span><i class="fa fa-trash">X</i></span> Buy New Robes</li>
+		<li><span><i class="fa fa-trash">X</i></span> Visit Hagrid</li>
+	</ul>
+</div>
+<script type="text/javascript">
+	//$("li").click(function(){
+	//为什么要加在ul上面，因为刚开始只有三个li，生效只是对刚开始的三个。
+	$("ul").on("click", "li", function(){
+		if ($(this).css("color") === "rgb(128, 128, 128)") {
+			$(this).css({
+				color : "black",
+				textDecoration : "none"
+			});
+		} else {
+			$(this).css({
+				color : "gray",
+				textDecoration : "line-through"
+			});
+		}
+	});
+
+	$("ul").on("click", "span", function(event){
+		$(this).parent().fadeOut(500, function(){
+			$(this).remove();
+		});
+		event.stopPropagation();
+	});
+
+	$("input[type = 'text']").keypress(function(event){
+		if (event.which === 13) {
+			var text = $(this).val();
+			$(this).val("");
+			$("ul").append("<li><span>X</span>" + text + "</li>");
+		}
+	});
+
+	$("#toggle-form").click(function(){
+		$("input[type = 'text']").fadeToggle();
+	});
+</script>
+</body>
+</html>
